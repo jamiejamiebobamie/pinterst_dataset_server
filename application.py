@@ -3,7 +3,7 @@ import boto3
 from flask_restplus import Api, Resource, fields
 from flask import Flask, jsonify, request, make_response, abort, render_template, redirect, url_for
 
-app = Flask(__name__)
+application = app = Flask(__name__)
 api = Api(app, version='1.0', title='Flower Identification API', description='Flower Species Identification')
 ns = api.namespace('myNamed_API', description='Methods')
 single_parser = api.parser()
@@ -74,4 +74,5 @@ class IdentifyFlower(Resource):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
+    # app.run(host='0.0.0.0', port=5000)

@@ -1,0 +1,3 @@
+boto3==1.9.228
+flask-restplus==0.13.0
+Flask==1.1.1
